@@ -33,6 +33,25 @@ class Category
     private $products = [];
 
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     * @return Category
+     */
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getName(): string

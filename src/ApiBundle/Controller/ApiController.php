@@ -40,7 +40,7 @@ class ApiController extends Controller
      * @ApiDoc(
      *     resource=true,
      *     section="category",
-     *     description="Get a list of all categoris",
+     *     description="Get a list of all categories",
      * )
      */
     public function getCategoriesAction()
