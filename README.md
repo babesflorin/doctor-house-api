@@ -1,4 +1,4 @@
-api
+doctor-house-api
 ===
 
-A Symfony project created on September 9, 2017, 8:44 am.
+[![Build Status](https://travis-ci.org/holysleeper/doctor-house-api.svg?branch=master)](https://travis-ci.org/holysleeper/doctor-house-api)
