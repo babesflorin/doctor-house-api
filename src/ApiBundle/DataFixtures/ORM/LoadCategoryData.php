@@ -19,7 +19,9 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
         $manager->persist((new Category())->setName('Cuptoare'));
         $manager->persist((new Category())->setName('Frigidere'));
         $manager->persist((new Category())->setName('Scaune'));
-        $manager->persist((new Category())->setName('Televizoare'));
+        $manager->persist((new Category())->setName('Televizoare si Video Proiectoare'));
+        $manager->persist((new Category())->setName('Mobilier'));
+        $manager->persist((new Category())->setName('Diverse'));
 
         $manager->flush();
     }

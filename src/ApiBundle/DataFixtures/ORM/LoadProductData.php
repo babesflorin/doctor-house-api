@@ -24,7 +24,7 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(879.99)
                 ->setCategory($categories[0])
                 ->setImage('http://cdn.ziwind.com/images/masina_de_spalat.jpg')
-                ->setModelObject('obj1.obj')
+                ->setModelObject(null)
                 ->setModelTexture(null)
         );
 
@@ -35,19 +35,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(10085.00)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/cuptor_electric.jpg')
-                ->setModelObject('obj2.obj')
-                ->setModelTexture('obj2.png')
-        );
-
-        $manager->persist(
-            (new Product())
-                ->setName('Frigider cu 2 usi Arctic AD54240P+, 223 l, Clasa A+, H 146.5, Alb')
-                ->setDescription('Compartiment spatios dedicat depozitarii legumelor si fructelor. Alimentele tale vor fi proaspete si gustoase o perioada indelungata!')
-                ->setPrice(749.99)
-                ->setCategory($categories[3])
-                ->setImage('http://cdn.ziwind.com/images/frigider.jpg')
-                ->setModelObject('obj3.obj')
-                ->setModelTexture('obj3.png')
+                ->setModelObject(null)
+                ->setModelTexture(null)
         );
 
         $manager->persist(
@@ -57,8 +46,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(339.42)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/microunde.jpg')
-                ->setModelObject(null)
-                ->setModelTexture(null)
+                ->setModelObject('microwave.obj')
+                ->setModelTexture('microwaveMap.jpg')
         );
 
         $manager->persist(
@@ -79,8 +68,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(139.99)
                 ->setCategory($categories[4])
                 ->setImage('http://cdn.ziwind.com/images/scaun.jpg')
-                ->setModelObject('obj6.obj')
-                ->setModelTexture('obj6.obj')
+                ->setModelObject(null)
+                ->setModelTexture(null)
         );
 
         $manager->persist(
@@ -90,8 +79,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(799.99)
                 ->setCategory($categories[5])
                 ->setImage('http://cdn.ziwind.com/images/tv1.jpg')
-                ->setModelObject('obj7.obj')
-                ->setModelTexture('obj7.obj')
+                ->setModelObject('tv.obj')
+                ->setModelTexture('tvCase.jpg')
         );
 
         $manager->persist(
@@ -101,8 +90,107 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(949.99)
                 ->setCategory($categories[5])
                 ->setImage('http://cdn.ziwind.com/images/tv2.jpg')
-                ->setModelObject('obj8.obj')
-                ->setModelTexture('obj8.obj')
+                ->setModelObject(null)
+                ->setModelTexture(null)
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Pat Dormitor 2 persoane Coral, Pal Melaminat 16 mm, Stejar Ferrara/Rift')
+                ->setDescription('Diferentiat printr-o cromatica sobra, patul Coral este piesa de mobilier potrivita persoanelor ce isi doresc un dormitor cat mai aerisit si modern.')
+                ->setPrice(408.97)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/bed.jpg')
+                ->setModelObject('bed.obj')
+                ->setModelTexture('bed.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Noptiera May, Tvilum 1 sertar, 38 x 30 x 48 cm')
+                ->setDescription('Gama May produsa exclusiv de Tvilum,Danemarca,lider European in furnizarea de mobilier practic si functional ,cu un raport excelent calitate/ pret ,va ofera comode si noptiere perfecte pentru orice dormitor.Sertarele sunt prevazute cu manere elegante si sistem de culisare realizat din plastic.Noptiera cu dimensiunile de (W)37.9 x (D)30.1 x (H)48.4 cm, ofera un sertar spatios.Produsul vine demontat cu instructiuni detaliate de asamblare incluse.Acesta poate fi combinat cu alte produse din gama May pentru a realiza un set.')
+                ->setPrice(139.99)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/cabinet.jpg')
+                ->setModelObject('cabinet.obj')
+                ->setModelTexture('cabinet.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Scaun de birou ergonomic Kring Lear Fit, PU, negru')
+                ->setDescription('Scaun de birou ergonomic Kring Lear Fit, PU, negru Scaunul Kring Lear Fit are un design modern si dotari dintre cele mai bune. Este o alegere care va ofera avantaje, vizual acesta creand un ambient placut, iar corpul dumneavoastra va resimti confort si relaxare, extrem de importante pentru desfasurarea optima a activitatilor de birou. .')
+                ->setPrice(279.99)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/chair.jpg')
+                ->setModelObject('chair.obj')
+                ->setModelTexture('chair.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Canapea extensibila Comfort 216/85/82')
+                ->setDescription('Comfort reprezinta una dintre cele mai simple, utile si uzuale modele de canapea pentru casa. Extinderea este de tip click – clack. Este un model realizat printr-un design extrem de simplu si fara spatarele laterale, dar care nu afecteaza nici confortul si nici eleganta de care se bucura acest corp de mobilier.')
+                ->setPrice(999)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/couch3.jpg')
+                ->setModelObject('couch3.obj')
+                ->setModelTexture('couch3.png')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Uscator rufe Miele TDB 130 WP Eco (7 kg, cu pompa de aer cald, A++)')
+                ->setDescription('TDB130WP Eco Rufe Clasa eficientei energetice-A++ Uscator cu pompa de caldura-invaluite de parfum.')
+                ->setPrice(4100)
+                ->setCategory($categories[0])
+                ->setImage('http://cdn.ziwind.com/images/dryerMachine.jpg')
+                ->setModelObject('dryerMachine.obj')
+                ->setModelTexture('dryerMachine.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Masa bucatarie ENGEL , Wenge/Argintiu , picioare metal satinat , 1200 x 800 x 730mm')
+                ->setDescription('Masa realizata din PAL melaminat de 36 mm, decor wenge/argintiu, cu picioare satinate.')
+                ->setPrice(291)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/woodenDesk.jpg')
+                ->setModelObject('woodenDesk.obj')
+                ->setModelTexture('woodenDesk.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Dulap Soft 2 usi cu bara pentru umesare, cires, 80 x 200 x 53 cm')
+                ->setDescription('Dulap Soft cu 2 usi fabricat din PAL Melaminat cu grosimea de 16 mm cires, manere din plastic cu filet metalic, 2 spatii de depozitare cu polite si 1 spatiu cu bara de haine pentru umerase, picioruse din plastic cu rol impotriva zgarierii pardoselilor. ')
+                ->setPrice(677)
+                ->setCategory($categories[6])
+                ->setImage('http://cdn.ziwind.com/images/wardrobe.jpg')
+                ->setModelObject('wardrobe.obj')
+                ->setModelTexture('wardrobe.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Videoproiector BenQ 3D MW705, WXGA, 4000 lumeni, Full HD')
+                ->setDescription('Design intuitiv ,Wireless streaming , inalta performanta si silentios. Proiectoarele conventionale de inalta luminozitate fac o multime de zgomot. Nu MW705, care reproduce luminozitate ultra-inalta cu doar 31dB de sunet, chiar si cu puteri depline.')
+                ->setPrice(2577)
+                ->setCategory($categories[5])
+                ->setImage('http://cdn.ziwind.com/images/videoProjector.jpg')
+                ->setModelObject('videoProjector.obj')
+                ->setModelTexture('videoProjector.jpg')
+        );
+
+        $manager->persist(
+            (new Product())
+                ->setName('Tinta Dart electronica')
+                ->setDescription('AG144 Tinta Dart electronica + 6 sagetiTinta electronica darts (sageti) este foarte distractiv pentru toata lumea, indiferent de varsta.')
+                ->setPrice(2577)
+                ->setCategory($categories[7])
+                ->setImage('http://cdn.ziwind.com/images/dartGame.jpg')
+                ->setModelObject('dartGame.obj')
+                ->setModelTexture('dartGame.jpg')
         );
 
         $manager->flush();
