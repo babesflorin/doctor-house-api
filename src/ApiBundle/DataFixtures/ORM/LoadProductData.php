@@ -68,8 +68,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(699.99)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/aragaz.jpg')
-                ->setModelObject('obj5.obj')
-                ->setModelTexture('obj5.obj')
+                ->setModelObject('oven-model.obj')
+                ->setModelTexture('oven-model.png')
         );
 
         $manager->persist(

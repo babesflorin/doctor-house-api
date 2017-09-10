@@ -85,4 +85,50 @@ class ApiController extends Controller
     {
         return $this->getDoctrine()->getRepository(Product::class)->findAll();
     }
+
+    /**
+     * @Rest\Post("statistics")
+     * @Rest\View()
+     * @ApiDoc(
+     *     resource=true,
+     *     section="statistics",
+     *     description="Post products statistics",
+     * )
+     */
+    public function postStatistics(Request $request)
+    {
+        $redis = $this->container->get('snc_redis.default');
+        $productIds = json_decode($request->getContent(), true);
+
+        foreach ($productIds as $id) {
+            $redis->set(sprintf('product:%s:last_hit', $id), time());
+            $redis->incr(sprintf('product:%s:hits', $id));
+            $redis->lpush(sprintf('product:%s:user_data', $id), ['user']);
+        }
+
+        return ['message' => 'statistics processed'];
+    }
+
+    /**
+     * @Rest\Get(
+     *     path="statistics/{id}",
+     *     requirements={"id": "\d+"}
+     * )
+     * @Rest\View()
+     * @ApiDoc(
+     *     resource=true,
+     *     section="statistics",
+     *     description="Get product statistics",
+     * )
+     */
+    public function getStatistics($id)
+    {
+        $redis = $this->container->get('snc_redis.default');
+
+        return [
+            'last_hit' => $redis->get(sprintf('product:%s:last_hit', $id)),
+            'hits' => $redis->get(sprintf('product:%s:hits', $id)),
+            'user_data' => $redis->lrange(sprintf('product:%s:user_data', $id), 0, -1),
+        ];
+    }
 }
