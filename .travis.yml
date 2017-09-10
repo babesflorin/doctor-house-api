@@ -10,12 +10,11 @@ services:
 
 before_script:
   - cp app/config/parameters.yml.travis app/config/parameters.yml
+  - cp app/phpunit.xml.dist app/phpunit.xml
   - composer install --dev
   - php app/console doctrine:database:create --env=test
   - php app/console doctrine:schema:create --env=test
   - php app/console doctrine:fixtures:load -n --env=test
 
 script:
-  - ls -al
-  - ls -al app/
-  - ./vendor/phpunit/phpunit/phpunit -c ./app/phpunit.xml
+  - vendor/phpunit/phpunit/phpunit -c .app/phpunit.xml
