@@ -3,6 +3,7 @@
 namespace ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as JMS;
 
 /**
  * @ORM\Entity
@@ -48,6 +49,18 @@ class Product
      * @ORM\Column(type="text")
      */
     private $image;
+
+    /**
+     * @var string
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $modelObject;
+
+    /**
+     * @var string
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $modelTexture;
 
     /**
      * @return int
@@ -159,6 +172,53 @@ class Product
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @JMS\VirtualProperty()
+     * @return bool
+     */
+    public function isArCompatible(): bool
+    {
+        return !is_null($this->getModelObject());
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getModelObject()
+    {
+        return $this->modelObject;
+    }
+
+    /**
+     * @param string|null $modelObject
+     * @return Product
+     */
+    public function setModelObject($modelObject): self
+    {
+        $this->modelObject = $modelObject;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getModelTexture()
+    {
+        return $this->modelTexture;
+    }
+
+    /**
+     * @param string|null $modelTexture
+     * @return $this
+     */
+    public function setModelTexture($modelTexture)
+    {
+        $this->modelTexture = $modelTexture;
 
         return $this;
     }

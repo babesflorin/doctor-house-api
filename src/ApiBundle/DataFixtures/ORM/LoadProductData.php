@@ -24,6 +24,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(879.99)
                 ->setCategory($categories[0])
                 ->setImage('http://cdn.ziwind.com/images/masina_de_spalat.jpg')
+                ->setModelObject('obj1.obj')
+                ->setModelTexture(null)
         );
 
         $manager->persist(
@@ -33,6 +35,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(10085.00)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/cuptor_electric.jpg')
+                ->setModelObject('obj2.obj')
+                ->setModelTexture('obj2.png')
         );
 
         $manager->persist(
@@ -42,6 +46,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(749.99)
                 ->setCategory($categories[3])
                 ->setImage('http://cdn.ziwind.com/images/frigider.jpg')
+                ->setModelObject('obj3.obj')
+                ->setModelTexture('obj3.png')
         );
 
         $manager->persist(
@@ -51,6 +57,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(339.42)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/microunde.jpg')
+                ->setModelObject(null)
+                ->setModelTexture(null)
         );
 
         $manager->persist(
@@ -60,6 +68,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(699.99)
                 ->setCategory($categories[2])
                 ->setImage('http://cdn.ziwind.com/images/aragaz.jpg')
+                ->setModelObject('obj5.obj')
+                ->setModelTexture('obj5.obj')
         );
 
         $manager->persist(
@@ -69,6 +79,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(139.99)
                 ->setCategory($categories[4])
                 ->setImage('http://cdn.ziwind.com/images/scaun.jpg')
+                ->setModelObject('obj6.obj')
+                ->setModelTexture('obj6.obj')
         );
 
         $manager->persist(
@@ -78,6 +90,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(799.99)
                 ->setCategory($categories[5])
                 ->setImage('http://cdn.ziwind.com/images/tv1.jpg')
+                ->setModelObject('obj7.obj')
+                ->setModelTexture('obj7.obj')
         );
 
         $manager->persist(
@@ -87,6 +101,8 @@ class LoadProductData  extends AbstractFixture implements OrderedFixtureInterfac
                 ->setPrice(949.99)
                 ->setCategory($categories[5])
                 ->setImage('http://cdn.ziwind.com/images/tv2.jpg')
+                ->setModelObject('obj8.obj')
+                ->setModelTexture('obj8.obj')
         );
 
         $manager->flush();

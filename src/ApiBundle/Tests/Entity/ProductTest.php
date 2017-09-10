@@ -16,7 +16,9 @@ class ProductTest extends \PHPUnit_Framework_TestCase
             ->setImage('http://foo.bar/image.png')
             ->setCategory($category)
             ->setPrice(12.34)
-            ->setDescription('description');
+            ->setDescription('description')
+            ->setModelObject('abc')
+            ->setModelTexture('xyz');
 
         $this->assertEquals(1234, $product->getId());
         $this->assertEquals('foo', $product->getName());
@@ -24,5 +26,8 @@ class ProductTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($category, $product->getCategory());
         $this->assertEquals(12.34, $product->getPrice());
         $this->assertEquals('description', $product->getDescription());
+        $this->assertEquals('abc', $product->getModelObject());
+        $this->assertEquals('xyz', $product->getModelTexture());
+        $this->assertEquals(true, $product->isArCompatible());
     }
 }
